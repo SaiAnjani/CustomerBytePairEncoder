@@ -1,6 +1,7 @@
 import re
 import requests
 from collections import Counter, defaultdict
+import pandas as pd
 
 # Step 1: Download telugu Dataset
 def download_telugu_dataset(url):
@@ -65,6 +66,18 @@ def calculate_compression(original_text, vocab):
     compression_ratio = original_size / compressed_size
     return compression_ratio
 
+import json
+
+def save_vocab(vocab, filepath):
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(vocab, f, ensure_ascii=False, indent=4)
+
+def save_model(vocab, model_dir):
+    import os
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
+    save_vocab(vocab, os.path.join(model_dir, 'vocab.json'))
+
 # Main function
 def main():
     temp_df = pd.read_csv('telugu_books.csv', encoding='utf-8', quotechar='"',on_bad_lines='skip',skiprows=[20295,23622,25228])
@@ -81,7 +94,8 @@ def main():
     else:
         print("Compression size is less than 3.2")
 
-    print(vocab)
+    save_model(vocab, 'telugu_bpe_model')
+
 
 if __name__ == "__main__":
     main()
