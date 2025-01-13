@@ -1,17 +1,31 @@
-# CustomerBytePairEncoder
-Custom byte pair encoder for an Indian Language
+# Telugu BPE Tokenizer
 
-# Byte Pair Encoding for Telugu Language
+This is a Byte Pair Encoding (BPE) tokenizer specifically designed for Telugu text processing. The model has been trained on Telugu text data with a vocabulary size of approximately 5000 tokens.
 
-This project implements Byte Pair Encoding (BPE) for the Telugu language. The script downloads a Telugu text dataset, preprocesses the text, and applies the BPE algorithm to generate a vocabulary of size 5000. It also calculates the compression ratio to ensure it is more than 3.2.
+## Features
 
-## Requirements
+- Telugu-specific text preprocessing
+- BPE tokenization with ~5000 tokens vocabulary
+- Handles Telugu characters, numbers, and punctuation
+- Provides compression statistics
 
-- Python 3.x
-- pandas
-- requests
+## Usage
 
-You can install the required libraries using pip:
+Enter Telugu text in the input box and get:
+- Preprocessed text
+- Tokenized output
+- Character and token counts
+- Compression ratio
 
-```bash
-pip install pandas requests
+## Examples
+
+Try these sample inputs:
+- నమస్కారం (Hello)
+- తెలుగు భాష చాలా అందమైన భాష (Telugu is a beautiful language)
+- నేను తెలుగులో మాట్లాడగలను (I can speak in Telugu)
+
+## Model Details
+
+- Vocabulary Size: ~5000 tokens
+- Preprocessing: Telugu-specific regex patterns
+- Implementation: Python-based BPE algorithm 
