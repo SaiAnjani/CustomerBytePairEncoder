@@ -12,10 +12,10 @@ This is a Byte Pair Encoding (BPE) tokenizer specifically designed for Telugu te
 ## Compression Performance
 
 The tokenizer achieves efficient text compression with the following characteristics:
-- Average compression ratio: ~1.5x - 2.5x (depending on input text)
-- Vocabulary size: ~5000 tokens
-- Handles both simple and complex Telugu text structures
-- Preserves linguistic features while reducing token count
+- Original tokens (words): 47094
+- Encoded tokens: 47094
+- Compression ratio: 3.37x
+- Vocabulary size: 4469
 
 Example compression results:
 
