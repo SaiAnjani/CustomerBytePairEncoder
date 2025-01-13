@@ -12,6 +12,7 @@ This is a Byte Pair Encoding (BPE) tokenizer specifically designed for Telugu te
 ## Compression Performance
 
 The tokenizer achieves efficient text compression with the following characteristics:
+- Original characters: 158551
 - Original tokens (words): 47094
 - Encoded tokens: 47094
 - Compression ratio: 3.37x
